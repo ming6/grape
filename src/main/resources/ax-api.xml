@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ax-api" group="com.attackonx" version="0.1-SNAPSHOT">
+    <model name="Api" packageName="com.attackonx.api">
+        <field name="id" type="String"></field>
+        <field name="name" type="String"></field>
+        <field name="path" type="String"></field>
+        <action name="List" path="/api/list" method="POST">
+            <request>
+                <field name="keyword" type="String" />
+                <field name="pageNumber" type="int" />
+                <field name="pageSize" type="int" />
+            </request>
+            <response>
+                <field name="apis" type="List">
+                    <field name="id"></field>
+                    <field name="name"></field>
+                    <field name="path"></field>
+                </field>
+            </response>
+        </action>
+    </model>
+    <model name="ApiParam" packageName="com.attackonx.api">
+        <field name="id" type="String"></field>
+        <field name="apiId" type="String"></field>
+        <field name="name" type="String"></field>
+        <field name="type" type="String"></field>
+    </model>
+</project>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:annotation-config />
+    <context:component-scan base-package="com.caishi.aquarius.sdk.service,com.caishi.aquarius.sdk.validator" />
+
+    <import resource="applicationContext-properties.xml" />
+    <!--<import resource="applicationContext-druid.xml" />-->
+    <!--<import resource="applicationContext-mybatis.xml" />-->
+    <import resource="applicationContext-ldap.xml" />
+    <import resource="applicationContext-security.xml" />
+    <import resource="applicationContext-elasticsearch-jest.xml" />
+    <import resource="applicationContext-elasticsearch-jest2.xml" />
+    <import resource="applicationContext-jedis-shard.xml" />
+    <import resource="applicationContext-cache.xml" />
+    <import resource="applicationContext-dubbo.xml" />
+    <import resource="applicationContext-kafka.xml" />
+    <!--<import resource="applicationContext-integration-kafka-producer-app.xml" />-->
+    <import resource="applicationContext-integration-kafka-producer-news.xml" />
+    <!--<import resource="applicationContext-integration-kafka-producer-plate.xml" />-->
+    <!--<import resource="applicationContext-integration-kafka-producer-source.xml" />-->
+    <!--<import resource="applicationContext-integration-kafka-producer-mediasource.xml" />-->
+    <import resource="applicationContext-data-mongo.xml" />
+</beans>
