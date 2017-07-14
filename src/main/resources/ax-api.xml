@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="ax-api" group="com.attackonx" version="0.1-SNAPSHOT">
     <model name="Api" packageName="com.attackonx.api">
-        <field name="id" type="String"></field>
-        <field name="name" type="String"></field>
-        <field name="path" type="String"></field>
-        <action name="List" path="/api/list" method="POST">
+        <field name="id" type="str"></field>
+        <field name="name" type="str"></field>
+        <field name="path" type="str"></field>
+        <action name="list" path="/api/list" method="POST">
             <request>
-                <field name="keyword" type="String" />
+                <field name="keyword" type="str" />
                 <field name="pageNumber" type="int" />
                 <field name="pageSize" type="int" />
             </request>
             <response>
-                <field name="apis" type="List">
-                    <field name="id"></field>
-                    <field name="name"></field>
-                    <field name="path"></field>
+                <field name="apis" type="list">
+                    <field name="api" type="api">
+                        <field name="id" type="str"></field>
+                        <field name="name" type="str"></field>
+                        <field name="path" type="str"></field>
+                    </field>
                 </field>
             </response>
         </action>

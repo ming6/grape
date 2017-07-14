@@ -1,0 +1,1 @@
+private #parse("common/FieldType.vm") $field.name;

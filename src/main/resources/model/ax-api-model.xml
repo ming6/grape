@@ -1,0 +1,5 @@
+<model name="api" packageName="com.attackonx.api">
+    <field name="id" type="str"></field>
+    <field name="name" type="str"></field>
+    <field name="path" type="str"></field>
+</model>

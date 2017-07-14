@@ -1,5 +1,8 @@
 package io.grape.model;
 
+import io.grape.coder.java.*;
+import io.papaya.kit.CollectionKit;
+
 import javax.xml.bind.annotation.*;
 import java.util.List;
 
@@ -48,5 +51,21 @@ public class Model {
 
     public void setActions(List<Action> actions) {
         this.actions = actions;
+    }
+
+    @Override
+    public String toString() {
+        JavaBuilder builder = new JavaBuilder(getName());
+        builder.setPackage(getPackageName());
+        if(CollectionKit.isNotEmpty(getFields())){
+            for(Field modelField : getFields()){
+                JavaValue.Type fieldType = new JavaValue.Type(modelField.getType());
+                JavaField javaField = new JavaField(fieldType, modelField.getName());
+                builder.addField(javaField);
+                builder.addMethod(new JavaGetMethod(javaField));
+                builder.addMethod(new JavaSetMethod(javaField));
+            }
+        }
+        return builder.build().toString();
     }
 }

@@ -1,0 +1,3 @@
+public #parse("common/FieldType.vm") get${StringKit.uppercaseFirstLetter($field.name)}(){
+    return $field.name;
+}

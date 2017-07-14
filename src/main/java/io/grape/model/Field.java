@@ -19,6 +19,14 @@ public class Field {
     @XmlElement(name = "field")
     private List<Field> fields;
 
+    public Field(String name, String type){
+        this.name = name;
+        this.type = type;
+    }
+    public Field(){
+
+    }
+
     public String getName() {
         return name;
     }

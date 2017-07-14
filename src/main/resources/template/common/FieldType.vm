@@ -1,0 +1,10 @@
+#if($field.type == 'list')List<${StringKit.uppercaseFirstLetter($field.name)}>#end
+#if($field.type == 'obj')${StringKit.uppercaseFirstLetter($field.name)}#end
+#if($field.type == 'str')String#end
+#if($field.type == 'int')Integer#end
+#if($field.type == 'long')Long#end
+#if($field.type == 'double')Double#end
+#if($field.type == 'float')Float#end
+#if($field.type == 'bool')Boolean#end
+#if($)
+#end

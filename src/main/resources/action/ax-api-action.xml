@@ -1,0 +1,12 @@
+<action name="list" path="/api/list/get" method="POST">
+    <request>
+        <param name="keyword" type="str" />
+        <param name="pageNumber" type="int" />
+        <param name="pageSize" type="int" />
+    </request>
+    <response>
+        <param name="apis" type="list">
+            <param name="api" type="api" />
+        </param>
+    </response>
+</action>

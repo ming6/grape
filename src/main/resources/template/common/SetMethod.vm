@@ -1,0 +1,3 @@
+public void set${StringKit.uppercaseFirstLetter($field.name)}(#parse("common/FieldType.vm") ${field.name}){
+    this.${field.name} = ${field.name};
+}

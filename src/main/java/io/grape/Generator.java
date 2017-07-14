@@ -7,11 +7,13 @@ import io.papaya.file.BaseFileService;
 import io.papaya.file.FileService;
 import io.papaya.function.Xml;
 import io.papaya.kit.ResourceKit;
+import org.apache.velocity.app.Velocity;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 /**
  * Created by jamin on 2017/7/11.
@@ -32,7 +34,12 @@ public class Generator {
         for(Model model : project.getModels()){
             params.put("project", project);
             params.put("model", model);
-            fileService.copy(ResourceKit.getClassPathFile("template/${project.name}"), "E:\\workspaces\\attackonx", new VelocityRenderService(), params);
+            Properties props = new Properties();
+//            props.setProperty("resource.loader", "file");
+//            props.put("class.resource.loader.class", "org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader");
+            String path = ResourceKit.getClassPathFile("template").getPath();
+            props.put(Velocity.FILE_RESOURCE_LOADER_PATH, path);
+            fileService.copy(ResourceKit.getClassPathFile("template/${project.name}"), "E:\\workspaces\\attackonx", new VelocityRenderService(props), params);
         }
     }
 }
