@@ -1,6 +1,6 @@
 package io.grape.service;
 
-import io.grape.coder.java.Java;
+import io.grape.seed.java.Java;
 import io.grape.model.Model;
 
 /**
@@ -11,7 +11,7 @@ public abstract class JavaModelService implements ModelService {
     public abstract Java getJava(Model model);
 
     @Override
-    public void render(Model model) {
+    public void generate(Model model) {
 
     }
 }

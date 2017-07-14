@@ -7,5 +7,5 @@ import io.grape.model.Model;
  */
 public interface ModelService {
 
-    void render(Model model);
+    void generate(Model model);
 }

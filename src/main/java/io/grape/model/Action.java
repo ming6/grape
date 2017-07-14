@@ -1,9 +1,8 @@
 package io.grape.model;
 
-import io.grape.coder.java.*;
+import io.grape.seed.java.*;
 import io.papaya.function.Text;
 import io.papaya.kit.CollectionKit;
-import io.papaya.kit.StringKit;
 
 import javax.xml.bind.annotation.*;
 import java.util.List;

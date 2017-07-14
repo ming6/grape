@@ -1,6 +1,6 @@
 package io.grape.model;
 
-import io.grape.coder.java.*;
+import io.grape.seed.java.*;
 
 /**
  * Created by jamin on 2017/7/13.

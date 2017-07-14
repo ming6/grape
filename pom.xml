@@ -15,7 +15,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github</groupId>
+            <groupId>io.grape</groupId>
+            <artifactId>grape-seek</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>io.papaya</groupId>
             <artifactId>papaya</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

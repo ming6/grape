@@ -1,6 +1,6 @@
 package io.grape.model;
 
-import io.grape.coder.java.*;
+import io.grape.seed.java.*;
 import io.papaya.kit.CollectionKit;
 
 import javax.xml.bind.annotation.*;

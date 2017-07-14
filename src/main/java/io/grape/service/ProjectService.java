@@ -7,5 +7,5 @@ import io.grape.model.Project;
  */
 public interface ProjectService {
 
-    void render(Project project);
+    void generate(Project project);
 }

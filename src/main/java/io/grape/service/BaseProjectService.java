@@ -11,9 +11,9 @@ public class BaseProjectService implements ProjectService {
     private ModelService modelService;
 
     @Override
-    public void render(Project project) {
+    public void generate(Project project) {
         for(Model model : project.getModels()){
-            modelService.render(model);
+            modelService.generate(model);
         }
     }
 }
